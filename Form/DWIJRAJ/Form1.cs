@@ -134,5 +134,41 @@ namespace DWIJRAJ
                     
             sw.Dispose();
         }
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+            string path;
+            OpenFileDialog ofd = new OpenFileDialog();
+            if (ofd.ShowDialog() == DialogResult.OK)
+            {
+                path = ofd.FileName;
+                //Reading single character from file
+
+                BinaryReader br = new BinaryReader(File.OpenRead(path));
+                //br.BaseStream.Position = 0xA;
+                //textBox1.Text = br.ReadChar().ToString();
+                byte[] a= br.ReadBytes(4);
+                Array.Reverse(a);
+
+                textBox1.Text=BitConverter.ToInt32(a, 0).ToString();
+                
+                br.Dispose();
+            }
+        }
+
+        private void button8_Click(object sender, EventArgs e)
+        {
+            SaveFileDialog sfd = new SaveFileDialog();
+            sfd.Filter = "TextFile|*.txt";
+            if (sfd.ShowDialog() == DialogResult.OK)
+            {
+                string path = sfd.FileName;
+
+                BinaryWriter bw = new BinaryWriter(File.Create(path));
+                bw.Write("File Created through C#");
+                bw.Dispose();
+            }
+
+        }
     }
 }
