@@ -1,0 +1,8 @@
+c:\users\rakeshs\documents\visual studio 2010\Projects\DWIJRAJ\DWIJRAJ\bin\Debug\DWIJRAJ.exe
+c:\users\rakeshs\documents\visual studio 2010\Projects\DWIJRAJ\DWIJRAJ\bin\Debug\DWIJRAJ.pdb
+c:\users\rakeshs\documents\visual studio 2010\Projects\DWIJRAJ\DWIJRAJ\obj\x86\Debug\DWIJRAJ.Form1.resources
+c:\users\rakeshs\documents\visual studio 2010\Projects\DWIJRAJ\DWIJRAJ\obj\x86\Debug\DWIJRAJ.Properties.Resources.resources
+c:\users\rakeshs\documents\visual studio 2010\Projects\DWIJRAJ\DWIJRAJ\obj\x86\Debug\DWIJRAJ.csproj.GenerateResource.Cache
+c:\users\rakeshs\documents\visual studio 2010\Projects\DWIJRAJ\DWIJRAJ\obj\x86\Debug\DWIJRAJ.exe
+c:\users\rakeshs\documents\visual studio 2010\Projects\DWIJRAJ\DWIJRAJ\obj\x86\Debug\DWIJRAJ.pdb
+C:\Users\RakeshS\documents\visual studio 2010\Projects\DWIJRAJ\DWIJRAJ\obj\x86\Debug\DWIJRAJ.csprojResolveAssemblyReference.cache
