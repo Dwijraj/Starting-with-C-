@@ -8,9 +8,10 @@ using System.Text;
 using System.Windows.Forms;
 using DWIJRAJ.Event;
 using DWIJRAJ.CustomDelegateEvent;
+using System.Threading; //To use Threading class
 using MySpace;
-using System.IO;
-
+using System.IO; //For StreamReader StreamWriter Path Directory and other various classes
+using System.Diagnostics; //For Process Class
 namespace DWIJRAJ
 {
     public partial class Form1 : Form
@@ -177,8 +178,8 @@ namespace DWIJRAJ
             if (fbd.ShowDialog() == DialogResult.OK)
             {
                 Directory.CreateDirectory(fbd.SelectedPath + "\\Dwijraj'sC#folder");//Creates a directory in specified path
-                Directory.Move(fbd.SelectedPath + "\\Dwijraj'sC#folder", fbd.SelectedPath + "\\Dinku");
-                Directory.Delete(fbd.SelectedPath);
+                Directory.Move(fbd.SelectedPath + "\\Dwijraj'sC#folder", fbd.SelectedPath + "\\Dinku");//Moves the file or Directory specified
+                Directory.Delete(fbd.SelectedPath);//Deleets the file/folder in the path
                 string rootfolder = Environment.SpecialFolder.MyDocuments.ToString();
                 MessageBox.Show(rootfolder);
                 //fbd.SelectedPath givees the path of the selected Directory
@@ -186,6 +187,106 @@ namespace DWIJRAJ
                 string[] directories = Directory.GetDirectories(fbd.SelectedPath); //Gets Directories
                 string[] drives = Directory.GetLogicalDrives(); //Gets the drives
             }
+        }
+
+        private void button10_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog ofd = new OpenFileDialog();
+            if (ofd.ShowDialog() == DialogResult.OK)
+            {
+                string path = ofd.FileName;
+                
+            }
+        }
+
+        private void button11_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog ofd = new OpenFileDialog();
+            if (ofd.ShowDialog() == DialogResult.OK)
+            {
+              
+                Path.GetDirectoryName(ofd.FileName); //Gets directory on which file is present
+                Path.GetExtension(ofd.FileName);    //Gets extension of the selected file name
+                Path.GetFileName(ofd.FileName);     //Gets File name of selected file with extension
+                Path.GetFileNameWithoutExtension(ofd.FileName); //Gets filename without the extension
+                Path.GetExtension(ofd.FileName);   //Gets the bool value weather or not the file has extension
+
+            }
+        }
+
+        private void button12_Click(object sender, EventArgs e)
+        {
+           // Process.Start("notepad.exe"); //For some programs no need to mention path mostly which are located in System32 folder
+            OpenFileDialog ofd = new OpenFileDialog();
+            if (ofd.ShowDialog() == DialogResult.OK)
+            {
+               // Process.Start(ofd.FileName);//Starts a process like startinf FIFA :D 
+                MessageBox.Show(Process.GetCurrentProcess().ProcessName); //Gets current process for example this line would return DWIJRAJ the namespace 
+                Process.GetCurrentProcess().Kill(); //Kills the process
+                Process.GetProcesses(); //Gets list of processes
+                Process.GetProcessesByName("Chrome");//Gets all processes with name chrome
+                /*
+                 * Null coalesence operator
+                 */
+                string randomstring = "";
+                MessageBox.Show(randomstring ?? "Hello");  //The ?? is Null coalesence operator
+            }
+        }
+
+        private void button13_Click(object sender, EventArgs e)
+        {
+            short a = ~3;  //Flips all the 16 bits of a
+            short b = 3 & 5;//Bitwise & operator
+            short c = 3 | 4;//Bitwise OR operator 
+            short xor = 6 ^ 7;//Bitwise XOR
+            short RightShift = 3 >> 1; //Right Shift shifts the bits
+            short LeftShift = 3 << 1; //Left Shift shifts the bits to left
+            Convert.ToString(a,2); //Shows the Binary representation of a here 2 means Binary
+        }
+        Thread t;
+        string my;
+        private void button14_Click(object sender, EventArgs e)
+        {
+          //  t = new Thread(Freeze); //Instantiating a Thread object and attaching a function to run on thread
+          //  t.Start();              //Starting a Thread
+
+            t = new Thread(WriteMethod);
+            t.Start();
+            while (t.IsAlive)   // Otherwise it simply prints null no events in thread
+            {
+                textBox2.Text = my;
+           
+                textBox2.Update();
+            }
+            
+        }
+        void WriteMethod()
+        {
+            for (int i = 0; i < 1000; i++)
+            {
+                Thread.Sleep(5);
+                my += "Dwijraj" + i.ToString() + "\r\n";
+            }
+        }
+        /**Simple Method to Freeze our application */
+        void Freeze()
+        {
+            while (true)
+            {
+               
+            }
+        }
+        //This method is required as when if we have a thread running and we close our 
+        //form then the process is not actually killed because the thread 
+        // is actually running 
+        private void Form1_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            t.Abort();  //Now the entire process is completly killed
+        }
+
+        private void textBox2_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
