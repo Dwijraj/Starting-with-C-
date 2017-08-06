@@ -170,5 +170,22 @@ namespace DWIJRAJ
             }
 
         }
+
+        private void button9_Click(object sender, EventArgs e)
+        {
+            FolderBrowserDialog fbd = new FolderBrowserDialog();
+            if (fbd.ShowDialog() == DialogResult.OK)
+            {
+                Directory.CreateDirectory(fbd.SelectedPath + "\\Dwijraj'sC#folder");//Creates a directory in specified path
+                Directory.Move(fbd.SelectedPath + "\\Dwijraj'sC#folder", fbd.SelectedPath + "\\Dinku");
+                Directory.Delete(fbd.SelectedPath);
+                string rootfolder = Environment.SpecialFolder.MyDocuments.ToString();
+                MessageBox.Show(rootfolder);
+                //fbd.SelectedPath givees the path of the selected Directory
+                string[] files= Directory.GetFiles(fbd.SelectedPath);//Gets Files
+                string[] directories = Directory.GetDirectories(fbd.SelectedPath); //Gets Directories
+                string[] drives = Directory.GetLogicalDrives(); //Gets the drives
+            }
+        }
     }
 }
