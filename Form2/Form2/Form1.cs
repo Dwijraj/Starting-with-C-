@@ -6,6 +6,7 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
+using System.Media;         //For Sound Player
 
 namespace Form2
 {
@@ -47,6 +48,97 @@ namespace Form2
             Clipboard.GetImage();              //Gets the Image which is copied on the clipboard
             Clipboard.GetData(DataFormats.Rtf);//Gets data of desired format from clipboard
             Clipboard.SetText("Hello");        //Sets a text in the Clipboard
+            Clipboard.SetImage(pictureBox1.Image);//Sets Image to Clipboard
+            Clipboard.Clear();                  //Clears Clipboard
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            ColorDialog cd = new ColorDialog();
+           // cd.AllowFullOpen = false;           //Disallows User to select Custom Color
+            cd.FullOpen = true;                 //Shows CustomColor Picker Default
+            cd.ShowHelp = true;                 //Show Help Button
+            cd.HelpRequest += new EventHandler(cd_HelpRequest); // Event when someone clicks help button
+            if (cd.ShowDialog() == DialogResult.OK)
+            {
+                button3.BackColor = cd.Color;   //Gets the selected Color cd.Color
+            }
+        }
+
+        void cd_HelpRequest(object sender, EventArgs e)
+        {
+            //Called when we click the help button
+            MessageBox.Show("Choose color for the backgroun of your button");
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            ColorDialog cd = new ColorDialog();
+            if (cd.ShowDialog() == DialogResult.OK)
+            {
+                Color c = cd.Color;
+                if (c.IsNamedColor)                              //Returns if color has name 
+                    MessageBox.Show(c.Name);                     //Shows name of the color if it has name won't show for custom color    
+                if (c.IsKnownColor)                              //Known COlors are colors which are used for Windows Property like scrollbar or button
+                    MessageBox.Show(c.ToKnownColor().ToString());// Gets the KnownColor
+
+               // KnownColor.ActiveBorder;                       // KnowColor enumeration contains all the colors that are known
+               // Color                                          // Color. Gives the name of all the colors that are known i.e KnownColors   
+               // Color.FromKnownColor(KnownColor.)             // KnowColor enumeration contains all the colors that are known
+
+               // Color CO ;
+               //CO.ToArgb().ToString("X")                     //Converts a color to 32bit
+               //Color.FromArgb(123);                          //Convert from int to Color 
+
+            }
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            FontDialog fd = new FontDialog();
+            fd.MaxSize = 23;        //Sets the Max size User can select
+            fd.MinSize = 10;        //Sets Min Size in User can select
+            fd.ShowColor = true;    //Allows to Select Color too
+            fd.ShowHelp = true;     //Shows a Help Button
+            fd.HelpRequest += new EventHandler(fd_HelpRequest); //Event When Help button click
+            if (fd.ShowDialog() == DialogResult.OK)
+            {
+                textBox1.Font = fd.Font;
+                textBox1.ForeColor = fd.Color;
+            }
+        }
+
+        void fd_HelpRequest(object sender, EventArgs e)
+        {
+            MessageBox.Show("Choose a Font for the text Box");
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            timer1.Start(); //Timer starts ticking regularly after interval(1s) till it is not stop
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            timer1.Stop();  //This code will stop the timer after it ticks once 
+            //Timer tick event
+            MessageBox.Show("Hello");
+        }
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog ofd = new OpenFileDialog();
+            if (ofd.ShowDialog() == DialogResult.OK)
+            {
+                SoundPlayer sp = new SoundPlayer(ofd.FileName);
+               // sp.SoundLocation = ofd.FileName;
+               // sp.PlaySync();        //When Played Can't move Application
+               // sp.PlayLooping();     //Play in Loop
+               // sp.Play();            //Use to Play only wav files not any other
+
+
+                SystemSounds.Asterisk.Play();   //Plays System Asterisk sound
+            }
         }
     }
 }
