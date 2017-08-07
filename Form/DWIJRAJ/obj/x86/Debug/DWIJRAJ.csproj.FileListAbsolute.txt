@@ -6,3 +6,5 @@ c:\users\rakeshs\documents\visual studio 2010\Projects\DWIJRAJ\DWIJRAJ\obj\x86\D
 c:\users\rakeshs\documents\visual studio 2010\Projects\DWIJRAJ\DWIJRAJ\obj\x86\Debug\DWIJRAJ.exe
 c:\users\rakeshs\documents\visual studio 2010\Projects\DWIJRAJ\DWIJRAJ\obj\x86\Debug\DWIJRAJ.pdb
 C:\Users\RakeshS\documents\visual studio 2010\Projects\DWIJRAJ\DWIJRAJ\obj\x86\Debug\DWIJRAJ.csprojResolveAssemblyReference.cache
+C:\Users\RakeshS\Documents\GitHub\Microsoft Visual Studio Projects\Form\DWIJRAJ\obj\x86\Debug\DWIJRAJ.exe
+C:\Users\RakeshS\Documents\GitHub\Microsoft Visual Studio Projects\Form\DWIJRAJ\obj\x86\Debug\DWIJRAJ.pdb
