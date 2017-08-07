@@ -1,0 +1,10 @@
+HHHHHWhazzzupp ey=
+00f2ac8e3e45eafc9cd5469f6771fb4d
+2.openweathermap
+http://api.openweathermap.org/data/2.5/forecast/daily?q=783385&mode=json&units=metric&cnt=7&appid=48b076c80a0b064d62117d19015db014
+48b076c80a0b064d62117d19015db014
+3.freemusicarchive
+HKCZS15ZAE0MZGD8
+
+
+

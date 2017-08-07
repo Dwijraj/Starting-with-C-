@@ -1,0 +1,7 @@
+c:\users\rakeshs\documents\visual studio 2010\Projects\NetWorking\NetWorking\bin\Debug\NetWorking.exe
+c:\users\rakeshs\documents\visual studio 2010\Projects\NetWorking\NetWorking\bin\Debug\NetWorking.pdb
+c:\users\rakeshs\documents\visual studio 2010\Projects\NetWorking\NetWorking\obj\x86\Debug\NetWorking.Form1.resources
+c:\users\rakeshs\documents\visual studio 2010\Projects\NetWorking\NetWorking\obj\x86\Debug\NetWorking.Properties.Resources.resources
+c:\users\rakeshs\documents\visual studio 2010\Projects\NetWorking\NetWorking\obj\x86\Debug\NetWorking.csproj.GenerateResource.Cache
+c:\users\rakeshs\documents\visual studio 2010\Projects\NetWorking\NetWorking\obj\x86\Debug\NetWorking.exe
+c:\users\rakeshs\documents\visual studio 2010\Projects\NetWorking\NetWorking\obj\x86\Debug\NetWorking.pdb
