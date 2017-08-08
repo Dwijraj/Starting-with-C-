@@ -180,5 +180,11 @@ namespace Form2
                 int ItemsTotal= comboBox1.Items.Count;          //Return number of items
             }
         }
+
+        private void button13_Click(object sender, EventArgs e)
+        {
+            ListView ls = new ListView();
+            ls.Show();
+        }
     }
 }
