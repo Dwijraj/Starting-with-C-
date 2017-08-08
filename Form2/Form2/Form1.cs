@@ -15,6 +15,7 @@ namespace Form2
         public Form1()
         {
             InitializeComponent();
+            textBox3.Text = Form2.Properties.Settings.Default.Name;
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -185,6 +186,29 @@ namespace Form2
         {
             ListView ls = new ListView();
             ls.Show();
+        }
+
+        private void button14_Click(object sender, EventArgs e)
+        {
+            //Notification will be used mainly when application hides
+            this.Hide();        //Hides the Application
+            notifyIcon1.ShowBalloonTip(3000,"My Title","Application is Hidden",ToolTipIcon.Info);    //Showing Notification
+        }
+
+        private void notifyIcon1_MouseDoubleClick(object sender, MouseEventArgs e)
+        {
+            //SHow Application
+            this.Show();
+        }
+
+        private void button15_Click(object sender, EventArgs e)
+        {
+            //GO to Project Select the Project name click settings add a new Settings 
+            
+
+            Form2.Properties.Settings.Default.Name = textBox3.Text; //Selecting the desired Settings name
+            Form2.Properties.Settings.Default.Save();               //Commiting our save so that it persists
+
         }
     }
 }
