@@ -47,13 +47,18 @@ namespace NetWorking
                 //An event which is fired everytime the Progress of Downloading changes can be used to update Progress Bar
                 wc.DownloadProgressChanged += new DownloadProgressChangedEventHandler(wc_DownloadProgressChanged);
 
+                //Changing progress Bar style to Marque Animation
+                progressBar1.Style = ProgressBarStyle.Marquee;
+            
             }
         }
 
         void wc_DownloadProgressChanged(object sender, DownloadProgressChangedEventArgs e)
         {
             //Called when change in Progress
-            label1.Text = "Progress " + e.ProgressPercentage;
+           // progressBar1.Value = e.ProgressPercentage;
+            //Marqueue animation is used when we don't know when actually the task will end
+            progressBar1.MarqueeAnimationSpeed = 10;
            
         }
 
@@ -61,6 +66,14 @@ namespace NetWorking
         {
             //Shows when Downloading is Complete
             MessageBox.Show("Downloading complete");
+           // progressBar1.MarqueeAnimationSpeed = 0; //Only holds not a goot way to  stop
+            progressBar1.Style = ProgressBarStyle.Blocks;
+
+        }
+
+        private void progressBar1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

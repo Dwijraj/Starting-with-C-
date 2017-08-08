@@ -5,3 +5,4 @@ c:\users\rakeshs\documents\visual studio 2010\Projects\NetWorking\NetWorking\obj
 c:\users\rakeshs\documents\visual studio 2010\Projects\NetWorking\NetWorking\obj\x86\Debug\NetWorking.csproj.GenerateResource.Cache
 c:\users\rakeshs\documents\visual studio 2010\Projects\NetWorking\NetWorking\obj\x86\Debug\NetWorking.exe
 c:\users\rakeshs\documents\visual studio 2010\Projects\NetWorking\NetWorking\obj\x86\Debug\NetWorking.pdb
+C:\Users\RakeshS\documents\visual studio 2010\Projects\NetWorking\NetWorking\obj\x86\Debug\NetWorking.csprojResolveAssemblyReference.cache
