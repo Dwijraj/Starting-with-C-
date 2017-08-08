@@ -140,5 +140,45 @@ namespace Form2
                 SystemSounds.Asterisk.Play();   //Plays System Asterisk sound
             }
         }
+
+        private void button9_Click(object sender, EventArgs e)
+        {
+            //Create an Instance to The next form 
+            Form3 f3 = new Form3(textBox2.Text);
+            f3.Show();  //Show the Form we can move between two forms
+           // f3.ShowDialog();    //If ShowDialog is used we cannot move between two forms 
+        }
+
+        private void button10_Click(object sender, EventArgs e)
+        {
+            //Creating MDI (Multi Document Interface)
+            this.IsMdiContainer = true; //This allows forms to be inside this form now Making an MDI which means this form can now hold forms and those forms can only be moved inside the container
+            Form3 f3 = new Form3();     //Create Instance to the form which we want inside the container
+            f3.MdiParent = this;        //This makes sure that f3 now resides inside form 1
+            f3.Show();                  //Now using ShowDialog for obvious reasons :P
+        }
+
+        private void button11_Click(object sender, EventArgs e)
+        {
+            //Arranging the Forms in the MDI
+            this.LayoutMdi(MdiLayout.ArrangeIcons); //This Line only arranges the forms when they are minimized
+            this.LayoutMdi(MdiLayout.Cascade);      //Just Makes the Form Bigger 
+
+        }
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            MessageBox.Show("Test");
+        }
+
+        private void button12_Click(object sender, EventArgs e)
+        {
+            if (comboBox1.Text == "Dwijraj")
+            {
+                comboBox1.Items[0] = "DWIJRAJ"; //Editing the contents of the comboList
+                comboBox1.Items.Add("DINKUS");  //Adding items to the comboBox
+                int ItemsTotal= comboBox1.Items.Count;          //Return number of items
+            }
+        }
     }
 }
