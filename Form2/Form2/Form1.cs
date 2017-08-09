@@ -210,5 +210,85 @@ namespace Form2
             Form2.Properties.Settings.Default.Save();               //Commiting our save so that it persists
 
         }
+
+        private void button16_Click(object sender, EventArgs e)
+        {
+            //Adding Nodes to the Tree View
+            treeView1.Nodes.Add("Root");
+            treeView1.Nodes.Add("Animals");
+
+            //Creating sub nodes
+            treeView1.Nodes[0].Nodes.Add("Dwijraj");
+            treeView1.Nodes[0].Nodes[0].Nodes.Add("Bhattacharyya");
+            /**
+             * For adding Images to Nodes
+             */
+            TreeNode tn = new TreeNode();
+            tn.Text = "here is Text";
+            tn.ImageIndex = 0;          //Add ImageList in FormDesign in TreeView
+            tn.SelectedImageIndex = tn.ImageIndex;      //Or else on Changing Image changes
+            treeView1.Nodes.Add(tn);
+
+
+        }
+
+        private void button17_Click(object sender, EventArgs e)
+        {
+            //Removing nodes
+           // treeView1.SelectedNode.Remove();
+            //To remove all nodes
+            //treeView1.Nodes.Clear();
+            RemoveChecked(treeView1.Nodes); //Removes selected Nodes
+        }
+        List<TreeNode> list = new List<TreeNode>();//List of Nodes to be Deleted 
+        void RemoveChecked(TreeNodeCollection tree)
+        {
+            foreach (TreeNode t in tree)
+            {
+                if (t.IsSelected)                  //Simple when node is selected deletes it's subnodes also!
+                    list.Add(t);
+                else if (t.Nodes.Count != 0)       //If Node has Subnodes which are selected but not all subnodes are selected
+                    RemoveChecked(t.Nodes);
+            }
+
+            foreach (TreeNode tn in list)          //Removing all Nodes 
+                treeView1.Nodes.Remove(tn);
+        }
+
+        private void button18_Click(object sender, EventArgs e)
+        {
+            //To Loop through all the controls present 
+            //But if a button is present inside groupBox only groupBox label changes not button text
+            
+            foreach (Control c in this.Controls)
+            {
+               // c.Text = "Dwijraj";
+                ChangeAll(c);
+            }
+            //For changing Text in all controls
+            
+        }
+        public void ChangeAll(Control a)
+        {
+            if (a.HasChildren)
+            {
+                a.Text = "Dwijraj";
+                foreach (Control c in a.Controls)
+                {
+                    ChangeAll(c);
+                }
+            }
+            else
+            {
+                try
+                {
+                    a.Text = "Dwijraj";
+                }
+                catch
+                { 
+                }
+            }
+        }
+            
     }
 }

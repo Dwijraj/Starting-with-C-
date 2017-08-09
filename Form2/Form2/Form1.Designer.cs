@@ -66,6 +66,11 @@
             this.button14 = new System.Windows.Forms.Button();
             this.button15 = new System.Windows.Forms.Button();
             this.textBox3 = new System.Windows.Forms.TextBox();
+            this.button16 = new System.Windows.Forms.Button();
+            this.treeView1 = new System.Windows.Forms.TreeView();
+            this.button17 = new System.Windows.Forms.Button();
+            this.propertyGrid1 = new System.Windows.Forms.PropertyGrid();
+            this.button18 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.toolStrip1.SuspendLayout();
             this.statusStrip1.SuspendLayout();
@@ -326,7 +331,7 @@
             this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripStatusLabel1,
             this.toolStripSplitButton1});
-            this.statusStrip1.Location = new System.Drawing.Point(0, 239);
+            this.statusStrip1.Location = new System.Drawing.Point(0, 380);
             this.statusStrip1.Name = "statusStrip1";
             this.statusStrip1.Size = new System.Drawing.Size(857, 22);
             this.statusStrip1.TabIndex = 20;
@@ -396,11 +401,62 @@
             this.textBox3.Size = new System.Drawing.Size(100, 20);
             this.textBox3.TabIndex = 23;
             // 
+            // button16
+            // 
+            this.button16.Location = new System.Drawing.Point(752, 269);
+            this.button16.Name = "button16";
+            this.button16.Size = new System.Drawing.Size(75, 23);
+            this.button16.TabIndex = 24;
+            this.button16.Text = "Tree View";
+            this.button16.UseVisualStyleBackColor = true;
+            this.button16.Click += new System.EventHandler(this.button16_Click);
+            // 
+            // treeView1
+            // 
+            this.treeView1.CheckBoxes = true;
+            this.treeView1.Location = new System.Drawing.Point(541, 269);
+            this.treeView1.Name = "treeView1";
+            this.treeView1.Size = new System.Drawing.Size(205, 108);
+            this.treeView1.TabIndex = 25;
+            // 
+            // button17
+            // 
+            this.button17.Location = new System.Drawing.Point(750, 298);
+            this.button17.Name = "button17";
+            this.button17.Size = new System.Drawing.Size(107, 23);
+            this.button17.TabIndex = 26;
+            this.button17.Text = "Remove Node";
+            this.button17.UseVisualStyleBackColor = true;
+            this.button17.Click += new System.EventHandler(this.button17_Click);
+            // 
+            // propertyGrid1
+            // 
+            this.propertyGrid1.Location = new System.Drawing.Point(331, 57);
+            this.propertyGrid1.Name = "propertyGrid1";
+            this.propertyGrid1.SelectedObject = this.button15;
+            this.propertyGrid1.Size = new System.Drawing.Size(130, 320);
+            this.propertyGrid1.TabIndex = 27;
+            // 
+            // button18
+            // 
+            this.button18.Location = new System.Drawing.Point(462, 56);
+            this.button18.Name = "button18";
+            this.button18.Size = new System.Drawing.Size(75, 23);
+            this.button18.TabIndex = 28;
+            this.button18.Text = "All controls";
+            this.button18.UseVisualStyleBackColor = true;
+            this.button18.Click += new System.EventHandler(this.button18_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(857, 261);
+            this.ClientSize = new System.Drawing.Size(857, 402);
+            this.Controls.Add(this.button18);
+            this.Controls.Add(this.propertyGrid1);
+            this.Controls.Add(this.button17);
+            this.Controls.Add(this.treeView1);
+            this.Controls.Add(this.button16);
             this.Controls.Add(this.textBox3);
             this.Controls.Add(this.button15);
             this.Controls.Add(this.button14);
@@ -475,6 +531,11 @@
         private System.Windows.Forms.Button button14;
         private System.Windows.Forms.Button button15;
         private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.Button button16;
+        private System.Windows.Forms.TreeView treeView1;
+        private System.Windows.Forms.Button button17;
+        private System.Windows.Forms.PropertyGrid propertyGrid1;
+        private System.Windows.Forms.Button button18;
     }
 }
 
