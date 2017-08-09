@@ -75,5 +75,62 @@ namespace NetWorking
         {
 
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            //Opens the webpage
+            //webBrowser1.Navigate(textBox2.Text);
+            //webBrowser1.Navigate("http://www.geeksforgeeks.org/");
+            webBrowser1.Navigate("http://www.yahoo.com");
+            webBrowser1.DocumentCompleted += new WebBrowserDocumentCompletedEventHandler(webBrowser1_DocumentCompleted);
+        }
+
+        void webBrowser1_DocumentCompleted(object sender, WebBrowserDocumentCompletedEventArgs e)
+        {
+          //Event when document Load Completed
+        }
+
+        private void webBrowser1_Navigated(object sender, WebBrowserNavigatedEventArgs e)
+        {
+            //Event when WeBrowser Navigates to a Page
+            textBox2.Text = webBrowser1.Url.ToString(); //Gives real URL of the navigated Page
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            //Goes to previous page
+            webBrowser1.GoBack();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            //Refresh Page
+            webBrowser1.Refresh();
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            //Go forward
+            webBrowser1.GoForward();
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            //Go Home
+            webBrowser1.GoHome();   //Since WebBrowser is Made of IE it goes to default homepage of IExplorer
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            //Setting the search by getting the ID of search bar and setting the text
+            webBrowser1.Document.GetElementById("uh-search-box").InnerText = textBox2.Text;
+        }
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+            //Getting the ID of the search Button and Invoking the member Click
+            webBrowser1.Document.GetElementById("uh-search-button").InvokeMember("Click");
+        }
+
     }
 }

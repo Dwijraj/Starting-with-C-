@@ -289,6 +289,11 @@ namespace Form2
                 }
             }
         }
+
+        private void button19_Click(object sender, EventArgs e)
+        {
+               MessageBox.Show(trackBar1.Value.ToString());
+        }
             
     }
 }
