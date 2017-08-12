@@ -16,7 +16,7 @@ namespace Form4
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             //TO implement Splash Screen
-            Application.Run(new SplashScreen());
+            Application.Run(new Form1());
         }
     }
 }

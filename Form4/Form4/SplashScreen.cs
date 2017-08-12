@@ -19,6 +19,9 @@ namespace Form4
         /// This is how you give description of a function
         /// </summary>
         Timer t;
+        #region Variables
+        int a ,b;
+        #endregion
         private void SplashScreen_Shown(object sender, EventArgs e)
         {
             t = new Timer();
@@ -31,7 +34,7 @@ namespace Form4
             t.Stop();
             Form1 ft = new Form1();
             ft.Show();
-            this.Hide();
+           
         }
     }
 }

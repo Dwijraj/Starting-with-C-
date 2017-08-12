@@ -6,3 +6,5 @@ c:\users\rakeshs\documents\visual studio 2010\Projects\Form4\Form4\obj\x86\Debug
 c:\users\rakeshs\documents\visual studio 2010\Projects\Form4\Form4\obj\x86\Debug\Form4.exe
 c:\users\rakeshs\documents\visual studio 2010\Projects\Form4\Form4\obj\x86\Debug\Form4.pdb
 c:\users\rakeshs\documents\visual studio 2010\Projects\Form4\Form4\obj\x86\Debug\Form4.Form1.resources
+C:\Users\RakeshS\documents\visual studio 2010\Projects\Form4\Form4\obj\x86\Debug\Form4.csprojResolveAssemblyReference.cache
+C:\Users\RakeshS\documents\visual studio 2010\Projects\Form4\Form4\obj\x86\Debug\Form4.SplashScreen.resources
