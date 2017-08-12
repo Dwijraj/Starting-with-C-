@@ -1,0 +1,8 @@
+c:\users\rakeshs\documents\visual studio 2010\Projects\Form4\Form4\bin\Debug\Form4.exe
+c:\users\rakeshs\documents\visual studio 2010\Projects\Form4\Form4\bin\Debug\Form4.pdb
+c:\users\rakeshs\documents\visual studio 2010\Projects\Form4\Form4\obj\x86\Debug\Form4.MyControl.resources
+c:\users\rakeshs\documents\visual studio 2010\Projects\Form4\Form4\obj\x86\Debug\Form4.Properties.Resources.resources
+c:\users\rakeshs\documents\visual studio 2010\Projects\Form4\Form4\obj\x86\Debug\Form4.csproj.GenerateResource.Cache
+c:\users\rakeshs\documents\visual studio 2010\Projects\Form4\Form4\obj\x86\Debug\Form4.exe
+c:\users\rakeshs\documents\visual studio 2010\Projects\Form4\Form4\obj\x86\Debug\Form4.pdb
+c:\users\rakeshs\documents\visual studio 2010\Projects\Form4\Form4\obj\x86\Debug\Form4.Form1.resources
