@@ -1,0 +1,8 @@
+c:\users\rakeshs\documents\visual studio 2010\Projects\AddressBook\AddressBook\obj\x86\Debug\AddressBook.Properties.Resources.resources
+c:\users\rakeshs\documents\visual studio 2010\Projects\AddressBook\AddressBook\obj\x86\Debug\AddressBook.csproj.GenerateResource.Cache
+c:\users\rakeshs\documents\visual studio 2010\Projects\AddressBook\AddressBook\bin\Debug\AddressBook.exe
+c:\users\rakeshs\documents\visual studio 2010\Projects\AddressBook\AddressBook\bin\Debug\AddressBook.pdb
+c:\users\rakeshs\documents\visual studio 2010\Projects\AddressBook\AddressBook\obj\x86\Debug\AddressBook.exe
+c:\users\rakeshs\documents\visual studio 2010\Projects\AddressBook\AddressBook\obj\x86\Debug\AddressBook.pdb
+c:\users\rakeshs\documents\visual studio 2010\Projects\AddressBook\AddressBook\obj\x86\Debug\AddressBook.AddressBook.resources
+C:\Users\RakeshS\documents\visual studio 2010\Projects\AddressBook\AddressBook\obj\x86\Debug\AddressBook.csprojResolveAssemblyReference.cache
