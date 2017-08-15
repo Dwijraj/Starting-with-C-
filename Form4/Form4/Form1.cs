@@ -7,6 +7,9 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 using System.Threading;
+using System.Collections;
+using System.IO;
+using Ionic.Zip;
 
 namespace Form4
 {
@@ -93,6 +96,56 @@ namespace Form4
 
             Item i5 = (Item)5;  //Calling explicit conversion
         }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+           
+        }
+        //Yield return doesn't complete the function completely
+        //it goes through on itertion than send it's result then
+        //again calls the function with different values
+        //IEumerable is iterface
+        IEnumerable GetNumbers(int min, int max)
+        {
+            while (min <= max)
+            {
+                min++;
+                yield return min;
+            }
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            FileSystemWatcher fs = new FileSystemWatcher();
+            fs.Path = Environment.GetFolderPath(Environment.SpecialFolder.Desktop);
+            fs.NotifyFilter = NotifyFilters.LastWrite | NotifyFilters.FileName;
+            fs.Filter = "*.txt";
+            fs.Changed += new FileSystemEventHandler(fs_Changed);
+            fs.Renamed += new RenamedEventHandler(fs_Renamed);
+            fs.EnableRaisingEvents = true;
+        }
+
+        void fs_Renamed(object sender, RenamedEventArgs e)
+        {
+            MessageBox.Show("You renamed a file");
+        }
+
+        void fs_Changed(object sender, FileSystemEventArgs e)
+        {
+            MessageBox.Show("You saved a file");
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog ofs = new OpenFileDialog();
+            if (ofs.ShowDialog() == DialogResult.OK)
+            {
+                ZipFile zp = new ZipFile(Environment.GetFolderPath(Environment.SpecialFolder.Desktop)+"\\MyFiles.zip");
+                zp.AddDirectory("Maina");  //Maina is a directory and should be created 
+                zp.AddFile(ofs.FileName,"Maina");   //this line shows that file should be inside Maina Directory
+                zp.Save();
+            }
+        }
     }
     class Item
     {
@@ -150,6 +203,12 @@ namespace Form4
         void changeRef(ref int a)
         {
             a++;
+        }
+        void FunctionWithOptionalParam(int a, int b = 10)
+        {
+            //Here b is optional and it's default value is 10 
+            //Optional parameter should always be the last param
+            //Nothing to do;
         }
     }
 }
